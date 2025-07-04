@@ -110,7 +110,26 @@ This is a modern full-stack portfolio website built with React, TypeScript, and 
 
 Preferred communication style: Simple, everyday language.
 
+### Project Vision
+- Dual personality website for ricksouza.online
+- Profile 1: Professional developer (projects, institutional landing page)
+- Profile 2: Personal side (technology blog, life in Sweden, music, personal stories)
+- Toggle buttons to switch between the two profiles
+- Modern design with personal avatar/logo
+- Multilingual support (Portuguese, English, Spanish)
+- Slogan: "Um entusiasta do digital"
+
+### Content Requirements
+- Contact page with form and social links
+- Portfolio section
+- Timeline showing career journey
+- Downloads area (CV, guides, checklists)
+- Newsletter signup
+- Blog for personal stories about Sweden, Spain, Brazil
+- High-quality photos: Ricardo, Sweden, Spain, Brazil
+
 ## Changelog
 
 Changelog:
-- July 04, 2025. Initial setup
+- July 04, 2025. Initial setup with Alex Rodriguez portfolio template
+- July 04, 2025. Updated requirements for Ricardo's dual-personality website (ricksouza.online)

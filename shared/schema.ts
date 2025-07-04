@@ -8,6 +8,37 @@ export const users = pgTable("users", {
   password: text("password").notNull(),
 });
 
+export const timeline = pgTable("timeline", {
+  id: serial("id").primaryKey(),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  date: text("date").notNull(),
+  location: text("location"),
+  icon: text("icon"),
+  category: text("category").notNull(), // "career", "personal", "travel"
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const downloads = pgTable("downloads", {
+  id: serial("id").primaryKey(),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  fileUrl: text("file_url").notNull(),
+  category: text("category").notNull(), // "cv", "guide", "checklist"
+  language: text("language").notNull(), // "pt", "en", "es"
+  downloads: integer("downloads").default(0),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const newsletter = pgTable("newsletter", {
+  id: serial("id").primaryKey(),
+  email: text("email").notNull().unique(),
+  name: text("name"),
+  language: text("language").default("pt"), // "pt", "en", "es"
+  subscribed: boolean("subscribed").default(true),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
 export const projects = pgTable("projects", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
@@ -61,6 +92,21 @@ export const insertContactMessageSchema = createInsertSchema(contactMessages).om
   createdAt: true,
 });
 
+export const insertTimelineSchema = createInsertSchema(timeline).omit({
+  id: true,
+  createdAt: true,
+});
+
+export const insertDownloadSchema = createInsertSchema(downloads).omit({
+  id: true,
+  createdAt: true,
+});
+
+export const insertNewsletterSchema = createInsertSchema(newsletter).omit({
+  id: true,
+  createdAt: true,
+});
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type Project = typeof projects.$inferSelect;
@@ -69,3 +115,9 @@ export type BlogPost = typeof blogPosts.$inferSelect;
 export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;
 export type ContactMessage = typeof contactMessages.$inferSelect;
 export type InsertContactMessage = z.infer<typeof insertContactMessageSchema>;
+export type Timeline = typeof timeline.$inferSelect;
+export type InsertTimeline = z.infer<typeof insertTimelineSchema>;
+export type Download = typeof downloads.$inferSelect;
+export type InsertDownload = z.infer<typeof insertDownloadSchema>;
+export type Newsletter = typeof newsletter.$inferSelect;
+export type InsertNewsletter = z.infer<typeof insertNewsletterSchema>;

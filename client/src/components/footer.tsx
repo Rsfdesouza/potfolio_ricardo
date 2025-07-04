@@ -1,6 +1,9 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { useProfile } from "@/hooks/use-profile";
 
 export function Footer() {
+  const { activeProfile } = useProfile();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -8,47 +11,66 @@ export function Footer() {
     }
   };
 
+  const gradientClass = activeProfile === "professional" 
+    ? "from-blue-400 to-purple-400" 
+    : "from-purple-400 to-pink-400";
+
+  const description = activeProfile === "professional"
+    ? "Criando soluções digitais modernas e funcionais que fazem a diferença no mundo da tecnologia."
+    : "Compartilhando histórias, experiências e conhecimento entre o Brasil e a Suécia. Um entusiasta do digital conectando culturas.";
+
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                AR
+              <span className={`text-3xl font-bold bg-gradient-to-r ${gradientClass} bg-clip-text text-transparent`}>
+                RS
               </span>
             </div>
+            <p className="text-gray-400 mb-2 max-w-md font-medium">
+              {activeProfile === "personal" && "Um entusiasta do digital"}
+            </p>
             <p className="text-gray-400 mb-6 max-w-md">
-              Creating beautiful, functional web applications that deliver exceptional user experiences.
+              {description}
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/ricksouza"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                className={`text-gray-400 transition-colors duration-200 ${
+                  activeProfile === "professional" ? "hover:text-blue-400" : "hover:text-purple-400"
+                }`}
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/ricksouza"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                className={`text-gray-400 transition-colors duration-200 ${
+                  activeProfile === "professional" ? "hover:text-blue-400" : "hover:text-purple-400"
+                }`}
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/ricksouza"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                className={`text-gray-400 transition-colors duration-200 ${
+                  activeProfile === "professional" ? "hover:text-blue-400" : "hover:text-purple-400"
+                }`}
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="mailto:alex@example.com"
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                href="mailto:contato@ricksouza.online"
+                className={`text-gray-400 transition-colors duration-200 ${
+                  activeProfile === "professional" ? "hover:text-blue-400" : "hover:text-purple-400"
+                }`}
               >
                 <Mail className="h-5 w-5" />
               </a>
@@ -121,7 +143,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2023 Alex Rodriguez. All rights reserved.</p>
+          <p>&copy; 2024 Ricardo Souza. Feito com ❤️ entre Brasil e Suécia.</p>
         </div>
       </div>
     </footer>

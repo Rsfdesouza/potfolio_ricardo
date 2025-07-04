@@ -1,11 +1,14 @@
 import { Link, useLocation } from "wouter";
 import { useTheme } from "./theme-provider";
+import { useProfile } from "@/hooks/use-profile";
 import { Sun, Moon, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ProfileToggle } from "./profile-toggle";
 import { useState } from "react";
 
 export function Navigation() {
   const { theme, toggleTheme } = useTheme();
+  const { activeProfile } = useProfile();
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -17,13 +20,24 @@ export function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
-  const navItems = [
-    { href: "home", label: "Home" },
-    { href: "about", label: "About" },
-    { href: "projects", label: "Projects" },
-    { href: "blog", label: "Blog" },
-    { href: "contact", label: "Contact" },
+  const professionalNavItems = [
+    { href: "home", label: "Início" },
+    { href: "about", label: "Sobre" },
+    { href: "projects", label: "Projetos" },
+    { href: "timeline", label: "Trajetória" },
+    { href: "contact", label: "Contato" },
   ];
+
+  const personalNavItems = [
+    { href: "home", label: "Home" },
+    { href: "about", label: "Sobre Mim" },
+    { href: "blog", label: "Blog" },
+    { href: "timeline", label: "Jornada" },
+    { href: "downloads", label: "Downloads" },
+    { href: "contact", label: "Contato" },
+  ];
+
+  const navItems = activeProfile === "professional" ? professionalNavItems : personalNavItems;
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
@@ -32,7 +46,7 @@ export function Navigation() {
           <div className="flex items-center">
             <Link href="/">
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer">
-                AR
+                RS
               </span>
             </Link>
           </div>
@@ -50,6 +64,8 @@ export function Navigation() {
           </div>
 
           <div className="flex items-center space-x-4">
+            <ProfileToggle />
+            
             <Button
               variant="ghost"
               size="icon"
