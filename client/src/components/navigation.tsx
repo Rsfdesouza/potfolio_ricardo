@@ -1,14 +1,17 @@
 import { Link, useLocation } from "wouter";
 import { useTheme } from "./theme-provider";
 import { useProfile } from "@/hooks/use-profile";
+import { useLanguage } from "@/hooks/use-language";
 import { Sun, Moon, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProfileToggle } from "./profile-toggle";
+import { LanguageSelector } from "./language-selector";
 import { useState } from "react";
 
 export function Navigation() {
   const { theme, toggleTheme } = useTheme();
   const { activeProfile } = useProfile();
+  const { t } = useLanguage();
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -21,20 +24,20 @@ export function Navigation() {
   };
 
   const professionalNavItems = [
-    { href: "home", label: "Início" },
-    { href: "about", label: "Sobre" },
-    { href: "projects", label: "Projetos" },
-    { href: "timeline", label: "Trajetória" },
-    { href: "contact", label: "Contato" },
+    { href: "home", label: t("nav.home") },
+    { href: "about", label: t("nav.about") },
+    { href: "projects", label: t("nav.projects") },
+    { href: "timeline", label: t("nav.timeline") },
+    { href: "contact", label: t("nav.contact") },
   ];
 
   const personalNavItems = [
-    { href: "home", label: "Home" },
-    { href: "about", label: "Sobre Mim" },
-    { href: "blog", label: "Blog" },
-    { href: "timeline", label: "Jornada" },
-    { href: "downloads", label: "Downloads" },
-    { href: "contact", label: "Contato" },
+    { href: "home", label: t("nav.home") },
+    { href: "about", label: t("nav.about") },
+    { href: "blog", label: t("nav.blog") },
+    { href: "timeline", label: t("nav.journey") },
+    { href: "downloads", label: t("nav.downloads") },
+    { href: "contact", label: t("nav.contact") },
   ];
 
   const navItems = activeProfile === "professional" ? professionalNavItems : personalNavItems;
@@ -65,6 +68,7 @@ export function Navigation() {
 
           <div className="flex items-center space-x-4">
             <ProfileToggle />
+            <LanguageSelector />
             
             <Button
               variant="ghost"

@@ -1,39 +1,41 @@
 import { MapPin, Briefcase, GraduationCap, Heart, Coffee, Music } from "lucide-react";
 import { useProfile } from "@/hooks/use-profile";
+import { useLanguage } from "@/hooks/use-language";
 
 export function AboutSection() {
   const { activeProfile } = useProfile();
+  const { t } = useLanguage();
 
   const professionalContent = {
-    title: "Sobre Mim",
-    description: "Desenvolvedor full-stack apaixonado com mais de 6 anos de experiência criando soluções digitais que fazem a diferença. Especializado em transformar ideias complexas em aplicações simples, elegantes e funcionais. Atualmente baseado na Suécia, trabalhando com empresas europeias.",
+    title: t("about.professional.title"),
+    description: t("about.professional.description"),
     details: [
-      { icon: <MapPin className="h-5 w-5" />, text: "Estocolmo, Suécia" },
-      { icon: <Briefcase className="h-5 w-5" />, text: "Disponível para projetos" },
-      { icon: <GraduationCap className="h-5 w-5" />, text: "Ciência da Computação, USP" }
+      { icon: <MapPin className="h-5 w-5" />, text: t("location.stockholm") },
+      { icon: <Briefcase className="h-5 w-5" />, text: t("status.available") },
+      { icon: <GraduationCap className="h-5 w-5" />, text: t("education.computer_science") }
     ],
     stats: [
-      { number: "30+", label: "Projetos Entregues" },
-      { number: "6+", label: "Anos de Experiência" }
+      { number: "30+", label: t("stats.projects") },
+      { number: "6+", label: t("stats.experience") }
     ],
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
-    alt: "Ricardo Souza - Desenvolvedor Full Stack"
+    image: "https://images.unsplash.com/photo-1618477371303-b2a56f422d9e?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Ricardo Souza - Full Stack Developer"
   };
 
   const personalContent = {
-    title: "Sobre o Rick",
-    description: "Brasileiro vivendo na Suécia, apaixonado por tecnologia, música e histórias. Acredito que as melhores experiências vêm das conexões que fazemos e das aventuras que vivemos. Aqui compartilho minha jornada entre dois mundos, sempre com um café na mão e uma boa playlist tocando.",
+    title: t("about.personal.title"),
+    description: t("about.personal.description"),
     details: [
-      { icon: <MapPin className="h-5 w-5" />, text: "Entre Brasil e Suécia" },
-      { icon: <Coffee className="h-5 w-5" />, text: "Viciado em café sueco" },
-      { icon: <Music className="h-5 w-5" />, text: "Sempre ouvindo algo novo" }
+      { icon: <MapPin className="h-5 w-5" />, text: t("location.brazil_sweden") },
+      { icon: <Coffee className="h-5 w-5" />, text: t("coffee.addict") },
+      { icon: <Music className="h-5 w-5" />, text: t("music.always") }
     ],
     stats: [
-      { number: "2", label: "Países Chamados de Casa" },
-      { number: "∞", label: "Histórias para Contar" }
+      { number: "2", label: t("stats.countries") },
+      { number: "∞", label: t("stats.stories") }
     ],
-    image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
-    alt: "Rick - Explorando a vida entre culturas"
+    image: "https://images.unsplash.com/photo-1618477371303-b2a56f422d9e?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Rick - Exploring life between cultures"
   };
 
   const content = activeProfile === "professional" ? professionalContent : personalContent;
@@ -63,6 +65,24 @@ export function AboutSection() {
                 {content.description}
               </p>
             </div>
+
+            {/* About Rick Section */}
+            <section className="max-w-3xl">
+              <h2 className="text-2xl font-bold mb-4">{t("about.rick.title")}</h2>
+              <p className="mb-4">
+                {t("about.rick.intro")}
+              </p>
+              <p className="mb-4">
+                {t("about.rick.specialties")}
+              </p>
+              <ul className="list-disc list-inside mb-4 space-y-1">
+                <li>React.js & Next.js</li>
+                <li>TypeScript</li>
+                <li>Firebase e PostgreSQL</li>
+                <li>UI/UX e performance web</li>
+              </ul>
+              <p>{t("about.rick.mission")}</p>
+            </section>
 
             <div className="space-y-4">
               {content.details.map((detail, index) => (

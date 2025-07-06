@@ -9,7 +9,7 @@ export function TimelineSection() {
       id: 1,
       title: "Desenvolvedor Full Stack Senior",
       description: "Liderando projetos de desenvolvimento web com React, Node.js e tecnologias modernas. Foco em arquitetura de software e mentoria de equipe.",
-      date: "2022 - Presente",
+      date: "Janeiro 2022 - Presente",
       location: "Suécia",
       icon: <Briefcase className="h-4 w-4" />,
       category: "career",
@@ -19,7 +19,7 @@ export function TimelineSection() {
       id: 2,
       title: "Mudança para a Suécia",
       description: "Transição de carreira internacional, adaptação a novas culturas de trabalho e desenvolvimento de projetos globais.",
-      date: "2021",
+      date: "Junho 2021",
       location: "Estocolmo, Suécia",
       icon: <Plane className="h-4 w-4" />,
       category: "personal",
@@ -29,7 +29,7 @@ export function TimelineSection() {
       id: 3,
       title: "Desenvolvedor Full Stack",
       description: "Desenvolvimento de aplicações web e mobile para startups brasileiras. Especialização em React, TypeScript e metodologias ágeis.",
-      date: "2018 - 2021",
+      date: "Março 2018 - Maio 2021",
       location: "São Paulo, Brasil",
       icon: <Briefcase className="h-4 w-4" />,
       category: "career",
@@ -39,7 +39,7 @@ export function TimelineSection() {
       id: 4,
       title: "Formação em Ciência da Computação",
       description: "Graduação com foco em desenvolvimento de software, algoritmos e estruturas de dados. Projetos acadêmicos em inteligência artificial.",
-      date: "2014 - 2018",
+      date: "Fevereiro 2014 - Dezembro 2018",
       location: "Universidade de São Paulo",
       icon: <GraduationCap className="h-4 w-4" />,
       category: "education",
@@ -52,7 +52,7 @@ export function TimelineSection() {
       id: 1,
       title: "Descobrindo a Cultura Sueca",
       description: "Aprendendo sobre lagom, fika e as particularidades de viver em um país nórdico. Compartilhando experiências sobre a vida no exterior.",
-      date: "2024",
+      date: "Janeiro 2024",
       location: "Suécia",
       icon: <MapPin className="h-4 w-4" />,
       category: "travel",
@@ -62,7 +62,7 @@ export function TimelineSection() {
       id: 2,
       title: "Aventuras Musicais",
       description: "Explorando a cena musical local e conectando com artistas de diferentes culturas. Música como ponte entre Brasil e Suécia.",
-      date: "2023",
+      date: "Março 2023",
       location: "Estocolmo",
       icon: <Music className="h-4 w-4" />,
       category: "music",
@@ -72,7 +72,7 @@ export function TimelineSection() {
       id: 3,
       title: "Primeira Viagem para a Europa",
       description: "O início de uma jornada que mudaria minha vida. Descobrindo a Espanha, Portugal e eventualmente a Suécia.",
-      date: "2021",
+      date: "Junho 2021",
       location: "Europa",
       icon: <Plane className="h-4 w-4" />,
       category: "travel",
@@ -82,7 +82,7 @@ export function TimelineSection() {
       id: 4,
       title: "Raízes Brasileiras",
       description: "Crescendo no Brasil, construindo a base que me levaria ao mundo. Família, amigos e as origens que sempre carrego comigo.",
-      date: "1990 - 2020",
+      date: "1990 - Dezembro 2020",
       location: "Brasil",
       icon: <MapPin className="h-4 w-4" />,
       category: "personal",
@@ -184,6 +184,29 @@ export function TimelineSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Timeline Final */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold mb-6 text-center">Timeline Final</h3>
+          <ul className="mt-12 space-y-4 max-w-2xl mx-auto">
+            <li className="flex items-center space-x-3">
+              <span className="text-2xl">📌</span>
+              <span className="text-gray-700 dark:text-gray-300">2023 – Início dos estudos em programação web</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <span className="text-2xl">💡</span>
+              <span className="text-gray-700 dark:text-gray-300">2024 – Primeiro projeto com React e Firebase</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <span className="text-2xl">🚀</span>
+              <span className="text-gray-700 dark:text-gray-300">2025 – Portfólio online e disponível para vagas</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <span className="text-2xl">🟢</span>
+              <span className="text-green-600 dark:text-green-400 font-semibold">Disponível para novos projetos</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

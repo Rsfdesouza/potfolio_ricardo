@@ -1,7 +1,8 @@
 import { defineConfig } from "drizzle-kit";
 
-if (!process.env.DATABASE_URL) {
-  throw new Error("DATABASE_URL, ensure the database is provisioned");
+// Only require DATABASE_URL if not using memory storage
+if (!process.env.DATABASE_URL && process.env.USE_MEMORY_STORAGE !== "true") {
+  throw new Error("DATABASE_URL is required when not using memory storage. Set USE_MEMORY_STORAGE=true for development without database.");
 }
 
 export default defineConfig({
@@ -9,6 +10,6 @@ export default defineConfig({
   schema: "./shared/schema.ts",
   dialect: "postgresql",
   dbCredentials: {
-    url: process.env.DATABASE_URL,
+    url: process.env.DATABASE_URL || "postgresql://dummy:dummy@localhost:5432/dummy",
   },
 });

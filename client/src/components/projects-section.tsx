@@ -103,6 +103,25 @@ export function ProjectsSection() {
             View All Projects
           </Button>
         </div>
+
+        {/* Projeto Exemplo */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold mb-6">Projetos em Destaque</h2>
+          <div className="bg-zinc-900 rounded-lg p-6">
+            <img 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+              alt="Capa do projeto" 
+              className="rounded mb-4 w-full h-48 object-cover" 
+            />
+            <h3 className="text-xl font-semibold text-white">App de Controle de Gastos</h3>
+            <p className="text-sm text-zinc-400 mb-2">React Native · Firebase · Expo</p>
+            <p className="mb-4 text-zinc-300">Aplicativo para registrar despesas e programar lembretes diários. Totalmente funcional e conectado com Firebase.</p>
+            <div className="flex gap-4">
+              <a href="https://github.com/seuusuario/projeto" className="text-blue-400 underline">🔗 GitHub</a>
+              <a href="https://meuapp.vercel.app" className="text-green-400 underline">🌐 Ver Projeto</a>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   );

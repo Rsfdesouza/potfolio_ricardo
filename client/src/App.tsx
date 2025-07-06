@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ProfileProvider } from "@/hooks/use-profile";
+import { LanguageProvider } from "@/hooks/use-language";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 
@@ -21,12 +22,14 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
+        <LanguageProvider>
         <ProfileProvider>
           <TooltipProvider>
             <Toaster />
             <Router />
           </TooltipProvider>
         </ProfileProvider>
+        </LanguageProvider>
       </ThemeProvider>
     </QueryClientProvider>
   );
