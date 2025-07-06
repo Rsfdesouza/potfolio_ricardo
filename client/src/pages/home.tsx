@@ -6,9 +6,9 @@ import { ProjectsSection } from "@/components/projects-section";
 import { BlogSection } from "@/components/blog-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
-import { TimelineSection } from "@/components/timeline-section";
 import { DownloadsSection } from "@/components/downloads-section";
 import { NewsletterSection } from "@/components/newsletter-section";
+import { CertificationsSection } from "@/components/certifications-section";
 import { useProfile } from "@/hooks/use-profile";
 
 export default function Home() {
@@ -20,9 +20,9 @@ export default function Home() {
       <HeroSection />
       <SkillsSection />
       <AboutSection />
+      <CertificationsSection />
       {activeProfile === "professional" && <ProjectsSection />}
       {activeProfile === "personal" && <BlogSection />}
-      <TimelineSection />
       {activeProfile === "personal" && <DownloadsSection />}
       <NewsletterSection />
       <ContactSection />

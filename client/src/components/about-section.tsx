@@ -1,4 +1,4 @@
-import { MapPin, Briefcase, GraduationCap, Heart, Coffee, Music } from "lucide-react";
+import { MapPin, Briefcase, GraduationCap, Heart, Coffee, Music, Code, Database, Palette, Zap } from "lucide-react";
 import { useProfile } from "@/hooks/use-profile";
 import { useLanguage } from "@/hooks/use-language";
 
@@ -24,7 +24,7 @@ export function AboutSection() {
 
   const personalContent = {
     title: t("about.personal.title"),
-    description: t("about.personal.description"),
+    description: "Explorando conexões entre tecnologia, cultura e vida internacional. Profissional de tecnologia com vivência entre Brasil e Suécia, compartilho experiências reais sobre inovação, música e a rotina no exterior — sempre com uma visão prática, autêntica e inspiradora.",
     details: [
       { icon: <MapPin className="h-5 w-5" />, text: t("location.brazil_sweden") },
       { icon: <Coffee className="h-5 w-5" />, text: t("coffee.addict") },
@@ -39,12 +39,16 @@ export function AboutSection() {
   };
 
   const content = activeProfile === "professional" ? professionalContent : personalContent;
-  const iconColor = activeProfile === "professional" 
-    ? "text-blue-600 dark:text-blue-400" 
-    : "text-purple-600 dark:text-purple-400";
-  const statColor = activeProfile === "professional" 
-    ? "text-blue-600 dark:text-blue-400" 
-    : "text-purple-600 dark:text-purple-400";
+  const iconColor = "text-blue-600 dark:text-blue-400";
+  const statColor = "text-blue-600 dark:text-blue-400";
+
+  const specialties = [
+    { icon: <Code className="h-5 w-5" />, name: "React.js & Next.js", color: "text-blue-600" },
+    { icon: <Code className="h-5 w-5" />, name: "TypeScript", color: "text-blue-600" },
+    { icon: <Database className="h-5 w-5" />, name: "Firebase & PostgreSQL", color: "text-green-600" },
+    { icon: <Palette className="h-5 w-5" />, name: "UI/UX Design", color: "text-purple-600" },
+    { icon: <Zap className="h-5 w-5" />, name: "Performance Web", color: "text-yellow-600" },
+  ];
 
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -55,46 +59,48 @@ export function AboutSection() {
               src={content.image}
               alt={content.alt}
               className="rounded-2xl shadow-2xl w-full h-auto max-w-md mx-auto"
+              loading="lazy"
             />
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">{content.title}</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.title}</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 {content.description}
               </p>
             </div>
 
-            {/* About Rick Section */}
-            <section className="max-w-3xl">
-              <h2 className="text-2xl font-bold mb-4">{t("about.rick.title")}</h2>
-              <p className="mb-4">
-                {t("about.rick.intro")}
-              </p>
-              <p className="mb-4">
-                {t("about.rick.specialties")}
-              </p>
-              <ul className="list-disc list-inside mb-4 space-y-1">
-                <li>React.js & Next.js</li>
-                <li>TypeScript</li>
-                <li>Firebase e PostgreSQL</li>
-                <li>UI/UX e performance web</li>
-              </ul>
-              <p>{t("about.rick.mission")}</p>
-            </section>
+            {/* Especialidades */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Especialidades</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {specialties.map((specialty, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <span className={specialty.color}>
+                      {specialty.icon}
+                    </span>
+                    <span className="text-sm text-gray-600 dark:text-gray-300">
+                      {specialty.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
+            {/* Details */}
             <div className="space-y-4">
               {content.details.map((detail, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <span className={iconColor}>
                     {detail.icon}
                   </span>
-                  <span>{detail.text}</span>
+                  <span className="text-gray-600 dark:text-gray-300">{detail.text}</span>
                 </div>
               ))}
             </div>
 
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-6 pt-6">
               {content.stats.map((stat, index) => (
                 <div key={index} className="text-center p-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg">

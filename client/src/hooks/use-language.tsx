@@ -16,30 +16,29 @@ const translations = {
     "nav.home": "Home",
     "nav.about": "About",
     "nav.projects": "Projects",
-    "nav.timeline": "Timeline",
     "nav.blog": "Blog",
     "nav.downloads": "Downloads",
     "nav.contact": "Contact",
-    "nav.journey": "Journey",
     
     // Hero Section
-    "hero.professional.headline": "Full Stack Developer passionate about modern and creative solutions.",
-    "hero.professional.specialty": "Specialized in React, TypeScript and web technologies.",
+    "hero.professional.headline": "Full Stack Developer",
+    "hero.professional.subtitle": "Modern, scalable and custom digital solutions for your business.",
+    "hero.professional.specialty": "Expert in React, TypeScript and modern web technologies. I work with focus on performance, usability and innovation to deliver high-value digital products.",
     "hero.cta.blog": "Read blog articles",
-    "hero.cta.journey": "See my journey",
     "hero.cta.projects": "See My Projects",
+    
+    // Projects Section
+    "projects.title": "Featured Projects",
+    "projects.subtitle": "Here are some of the projects I've developed, applying my skills with modern technologies and focusing on real solutions.",
+    "projects.featured": "Featured Projects",
+    "projects.all": "All Projects",
+    "projects.viewAll": "View All Projects",
     
     // About Section
     "about.professional.title": "About Me",
     "about.professional.description": "Full-stack developer passionate about creating digital solutions that make a difference. Specialized in transforming complex ideas into simple, elegant, and functional applications. Currently based in Sweden, working with European companies.",
     "about.personal.title": "About Rick",
-    "about.personal.description": "Brazilian living in Sweden, passionate about technology, music, and stories. I believe the best experiences come from the connections we make and the adventures we live. Here I share my journey between two worlds, always with coffee in hand and a good playlist playing.",
-    
-    // About Rick Section
-    "about.rick.title": "About me",
-    "about.rick.intro": "I am Ricardo Souza, a Brazilian Full Stack developer living in Sweden. I have a passion for technology, music and telling stories through digital experiences.",
-    "about.rick.specialties": "Currently I specialize in:",
-    "about.rick.mission": "My mission is to create simple, modern solutions that connect people.",
+    "about.personal.description": "Exploring connections between technology, culture and international life. Technology professional with experience between Brazil and Sweden, I share real experiences about innovation, music and routine abroad — always with a practical, authentic and inspiring vision.",
     
     // Common
     "location.stockholm": "Stockholm, Sweden",
@@ -72,30 +71,29 @@ const translations = {
     "nav.home": "Início",
     "nav.about": "Sobre",
     "nav.projects": "Projetos",
-    "nav.timeline": "Trajetória",
     "nav.blog": "Blog",
     "nav.downloads": "Downloads",
     "nav.contact": "Contato",
-    "nav.journey": "Jornada",
     
     // Hero Section
-    "hero.professional.headline": "Desenvolvedor Full Stack apaixonado por soluções modernas e criativas.",
-    "hero.professional.specialty": "Especializado em React, TypeScript e tecnologias web.",
+    "hero.professional.headline": "Desenvolvedor Full Stack",
+    "hero.professional.subtitle": "Soluções digitais modernas, escaláveis e sob medida para o seu negócio.",
+    "hero.professional.specialty": "Especialista em React, TypeScript e tecnologias web modernas. Atuo com foco em performance, usabilidade e inovação para entregar produtos digitais de alto valor.",
     "hero.cta.blog": "Ler artigos no blog",
-    "hero.cta.journey": "Veja minha trajetória",
     "hero.cta.projects": "Ver Meus Projetos",
+    
+    // Projects Section
+    "projects.title": "Projetos em Destaque",
+    "projects.subtitle": "Aqui estão alguns dos projetos que desenvolvi, aplicando na prática minhas habilidades com tecnologias modernas e foco em soluções reais.",
+    "projects.featured": "Projetos em Destaque",
+    "projects.all": "Todos os Projetos",
+    "projects.viewAll": "Ver Todos os Projetos",
     
     // About Section
     "about.professional.title": "Sobre Mim",
     "about.professional.description": "Desenvolvedor full-stack apaixonado com mais de 6 anos de experiência criando soluções digitais que fazem a diferença. Especializado em transformar ideias complexas em aplicações simples, elegantes e funcionais. Atualmente baseado na Suécia, trabalhando com empresas europeias.",
     "about.personal.title": "Sobre o Rick",
-    "about.personal.description": "Brasileiro vivendo na Suécia, apaixonado por tecnologia, música e histórias. Acredito que as melhores experiências vêm das conexões que fazemos e das aventuras que vivemos. Aqui compartilho minha jornada entre dois mundos, sempre com um café na mão e uma boa playlist tocando.",
-    
-    // About Rick Section
-    "about.rick.title": "Sobre mim",
-    "about.rick.intro": "Sou Ricardo Souza, desenvolvedor Full Stack brasileiro vivendo na Suécia. Tenho paixão por tecnologia, música e contar histórias através de experiências digitais.",
-    "about.rick.specialties": "Atualmente me especializo em:",
-    "about.rick.mission": "Minha missão é criar soluções simples, modernas e que conectem pessoas.",
+    "about.personal.description": "Explorando conexões entre tecnologia, cultura e vida internacional. Profissional de tecnologia com vivência entre Brasil e Suécia, compartilho experiências reais sobre inovação, música e a rotina no exterior — sempre com uma visão prática, autêntica e inspiradora.",
     
     // Common
     "location.stockholm": "Estocolmo, Suécia",
@@ -128,30 +126,29 @@ const translations = {
     "nav.home": "Inicio",
     "nav.about": "Sobre",
     "nav.projects": "Proyectos",
-    "nav.timeline": "Trayectoria",
     "nav.blog": "Blog",
     "nav.downloads": "Descargas",
     "nav.contact": "Contacto",
-    "nav.journey": "Viaje",
     
     // Hero Section
-    "hero.professional.headline": "Desarrollador Full Stack apasionado por soluciones modernas y creativas.",
-    "hero.professional.specialty": "Especializado en React, TypeScript y tecnologías web.",
+    "hero.professional.headline": "Desarrollador Full Stack",
+    "hero.professional.subtitle": "Soluciones digitales modernas, escalables y a medida para tu negocio.",
+    "hero.professional.specialty": "Especialista en React, TypeScript y tecnologías web modernas. Actúo con enfoque en rendimiento, usabilidad e innovación para entregar productos digitales de alto valor.",
     "hero.cta.blog": "Leer artículos del blog",
-    "hero.cta.journey": "Ver mi trayectoria",
     "hero.cta.projects": "Ver Mis Proyectos",
+    
+    // Projects Section
+    "projects.title": "Proyectos Destacados",
+    "projects.subtitle": "Aquí están algunos de los proyectos que he desarrollado, aplicando en la práctica mis habilidades con tecnologías modernas y enfoque en soluciones reales.",
+    "projects.featured": "Proyectos Destacados",
+    "projects.all": "Todos los Proyectos",
+    "projects.viewAll": "Ver Todos los Proyectos",
     
     // About Section
     "about.professional.title": "Sobre Mí",
     "about.professional.description": "Desarrollador full-stack apasionado con más de 6 años de experiencia creando soluciones digitales que marcan la diferencia. Especializado en transformar ideas complejas en aplicaciones simples, elegantes y funcionales. Actualmente radicado en Suecia, trabajando con empresas europeas.",
     "about.personal.title": "Sobre Rick",
-    "about.personal.description": "Brasileño viviendo en Suecia, apasionado por la tecnología, música e historias. Creo que las mejores experiencias vienen de las conexiones que hacemos y las aventuras que vivimos. Aquí comparto mi viaje entre dos mundos, siempre con café en mano y una buena playlist sonando.",
-    
-    // About Rick Section
-    "about.rick.title": "Sobre mí",
-    "about.rick.intro": "Soy Ricardo Souza, desarrollador Full Stack brasileño viviendo en Suecia. Tengo pasión por la tecnología, música y contar historias a través de experiencias digitales.",
-    "about.rick.specialties": "Actualmente me especializo en:",
-    "about.rick.mission": "Mi misión es crear soluciones simples, modernas y que conecten personas.",
+    "about.personal.description": "Explorando conexiones entre tecnología, cultura y vida internacional. Profesional de tecnología con vivencia entre Brasil y Suecia, comparto experiencias reales sobre innovación, música y la rutina en el exterior — siempre con una visión práctica, auténtica e inspiradora.",
     
     // Common
     "location.stockholm": "Estocolmo, Suecia",
@@ -175,7 +172,7 @@ const translations = {
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>("pt");
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations[typeof language]] || key;

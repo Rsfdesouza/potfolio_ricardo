@@ -27,7 +27,6 @@ export function Navigation() {
     { href: "home", label: t("nav.home") },
     { href: "about", label: t("nav.about") },
     { href: "projects", label: t("nav.projects") },
-    { href: "timeline", label: t("nav.timeline") },
     { href: "contact", label: t("nav.contact") },
   ];
 
@@ -35,7 +34,6 @@ export function Navigation() {
     { href: "home", label: t("nav.home") },
     { href: "about", label: t("nav.about") },
     { href: "blog", label: t("nav.blog") },
-    { href: "timeline", label: t("nav.journey") },
     { href: "downloads", label: t("nav.downloads") },
     { href: "contact", label: t("nav.contact") },
   ];
